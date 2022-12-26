@@ -60,7 +60,7 @@ const Home = () => {
     const submit = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:5000/application', {
+        fetch('https://loan-application-server-red.vercel.app/application', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -79,7 +79,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/details/${id}`)
+        fetch(`https://loan-application-server-red.vercel.app/details/${id}`)
             .then(res => res.json())
             .then(data => setDetails(data))
     }, [id])
